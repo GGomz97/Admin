@@ -1,0 +1,220 @@
+/* ========================================== */
+/* SECCIÓN DE HISTORIAL DE CITAS */
+/* ========================================== */
+
+.history-section {
+    background-color: var(--text-color-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.history-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--text-color-dark);
+}
+
+.history-filters {
+    margin-bottom: 30px;
+}
+
+.history-filters h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color-dark);
+    margin-bottom: 15px;
+}
+
+.filters-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+.filter-input {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.filter-input input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 2px solid var(--border-color-light);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    transition: border-color 0.2s ease;
+}
+
+.filter-input input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.filter-input i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+}
+
+.filter-select {
+    padding: 12px 15px;
+    border: 2px solid var(--border-color-light);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.filter-select:hover {
+    border-color: var(--accent-color);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.clear-filters-btn {
+    padding: 12px 20px;
+    white-space: nowrap;
+    align-self: flex-end;
+}
+
+.clear-filters-btn i {
+    margin-right: 5px;
+}
+
+.history-table-container {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 2px solid var(--border-color-light);
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--text-color-light);
+}
+
+.history-table thead {
+    background-color: #F0F0F0;
+}
+
+.history-table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-color-dark);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-color-light);
+}
+
+.history-table tbody tr {
+    border-bottom: 1px solid var(--border-color-light);
+    transition: background-color 0.2s ease;
+}
+
+.history-table tbody tr:hover {
+    background-color: #F8F8F8;
+}
+
+.history-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.history-table td {
+    padding: 15px 20px;
+    font-size: 14px;
+    color: var(--text-color-dark);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pendiente {
+    background-color: #FFE5B4;
+    color: #D97706;
+}
+
+.status-badge.confirmada {
+    background-color: #D1FAE5;
+    color: #059669;
+}
+
+.status-badge.rechazada {
+    background-color: #FEE2E2;
+    color: #DC2626;
+}
+
+.status-badge.perdida {
+    background-color: #E5E7EB;
+    color: #6B7280;
+}
+
+.status-badge.realizada {
+    background-color: #DBEAFE;
+    color: #2563EB;
+}
+
+.no-history {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .filters-row {
+        flex-direction: column;
+    }
+
+    .filter-group,
+    .filter-input {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .clear-filters-btn {
+        width: 100%;
+    }
+
+    .history-table-container {
+        overflow-x: scroll;
+    }
+
+    .history-table {
+        min-width: 800px;
+    }
+}

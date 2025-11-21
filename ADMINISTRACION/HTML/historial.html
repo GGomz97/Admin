@@ -1,0 +1,63 @@
+<!-- ========================================== -->
+<!-- SECCIÓN DE HISTORIAL DE CITAS -->
+<!-- ========================================== -->
+<section class="history-section" aria-labelledby="history-title">
+    <h2 id="history-title">Historial de citas</h2>
+    
+    <!-- Filtros -->
+    <div class="history-filters">
+        <h3>Filtrar</h3>
+        <div class="filters-row">
+            <div class="filter-group">
+                <label for="historySearchInput">Buscar</label>
+                <div class="filter-input">
+                    <input type="text" id="historySearchInput" placeholder="Fecha, servicio, estilista..." aria-label="Buscar en historial">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="historyStatusFilter">Estado</label>
+                <select id="historyStatusFilter" class="filter-select" aria-label="Filtrar por estado">
+                    <option value="all">Todos los estados</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Confirmada">Confirmada</option>
+                    <option value="Rechazada">Rechazada</option>
+                    <option value="Perdida">Perdida</option>
+                    <option value="Realizada">Realizada</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="historySortOrder">Ordenar por</label>
+                <select id="historySortOrder" class="filter-select" aria-label="Ordenar por fecha">
+                    <option value="desc">Más recientes primero</option>
+                    <option value="asc">Más antiguas primero</option>
+                </select>
+            </div>
+
+            <button id="clearHistoryFilters" class="btn secondary clear-filters-btn" aria-label="Limpiar filtros">
+                <i class="fas fa-times"></i> Limpiar
+            </button>
+        </div>
+    </div>
+
+    <!-- Tabla de historial -->
+    <div class="history-table-container">
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Estatus</th>
+                    <th>Fecha Cita</th>
+                    <th>Fecha Solicitud</th>
+                    <th>Servicios</th>
+                    <th>Estilista</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="historyTableBody">
+                <!-- Las filas se generan dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+</section>

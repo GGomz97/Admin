@@ -1,0 +1,128 @@
+.stylists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stylist-card {
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.stylist-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stylist-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #C0C0C0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #FFF;
+    background-size: cover;
+    background-position: center;
+}
+
+.stylist-info {
+    flex-grow: 1;
+}
+
+.stylist-info h3,
+.stylist-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: var(--text-color-dark);
+}
+
+.stylist-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.stylist-info strong {
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+.stylist-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schedule-btn,
+.edit-card-btn,
+.delete-card-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.edit-card-btn {
+    background-color: var(--dark-bg);
+    color: var(--text-color-light);
+}
+
+.edit-card-btn:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+}
+
+.schedule-btn {
+    background-color: var(--text-color-light);
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-color-light);
+}
+
+.schedule-btn:hover {
+    background-color: #E5E5E5;
+}
+
+.delete-card-btn {
+    background-color: var(--text-color-light);
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-color-light);
+}
+
+.delete-card-btn:hover {
+    background-color: #E5E5E5;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .stylist-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stylist-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .stylist-actions {
+        width: 100%;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,38 @@
+<!-- ========================================== -->
+<!-- SECCIÓN DE NOTIFICACIONES -->
+<!-- ========================================== -->
+<section class="notifications-section" aria-labelledby="notifications-title">
+    <h2 id="notifications-title">Notificaciones</h2>
+    
+    <!-- Pestañas de filtrado -->
+    <div class="notifications-tabs">
+        <button class="notification-tab active" data-status="pendientes">Pendientes</button>
+        <button class="notification-tab" data-status="confirmadas">Confirmadas</button>
+        <button class="notification-tab" data-status="realizadas">Realizadas</button>
+        <button class="notification-tab" data-status="rechazadas">Rechazadas</button>
+    </div>
+
+    <!-- Contenedor de notificaciones -->
+    <div class="notifications-container" id="notificationsContainer">
+        <!-- Las notificaciones se generan dinámicamente -->
+    </div>
+
+    <!-- Link al historial -->
+    <a href="#historial" class="notification-history-link" id="viewHistoryLink">Ver historial</a>
+</section>
+
+<!-- MENÚ CONTEXTUAL DE NOTIFICACIONES -->
+<div class="notification-context-menu" id="notificationContextMenu">
+    <div class="context-menu-item accept" data-action="accept">
+        <i class="fas fa-check"></i>
+        <span>Confirmar</span>
+    </div>
+    <div class="context-menu-item reject" data-action="reject">
+        <i class="fas fa-times"></i>
+        <span>Rechazar</span>
+    </div>
+    <div class="context-menu-item cancel" data-action="cancel">
+        <i class="fas fa-ban"></i>
+        <span>Cancelar</span>
+    </div>
+</div>
